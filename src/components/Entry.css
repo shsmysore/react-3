@@ -1,6 +1,11 @@
+.enrty-container {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 .entry {
     display: flex;
-    
+    margin-bottom: 10px;
 }
 
 .entry > .img-container {
@@ -42,6 +47,11 @@
 
 .location > a {
     margin-left: 15px;
+}
+
+.details > h2 {
+    margin-top: 7px;
+    margin-bottom: 17px;
 }
 
 .details > .description {

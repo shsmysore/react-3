@@ -1,22 +1,26 @@
 import './Entry.css';
+import locationIcon from '../assets/adobe-location.png';
 
-function Entry() {
-    return(
-        <section className='entry'>
-            <div className='img-container'>
-                <img src='../../public/japan.png' alt='japan image'></img>
-            </div> 
-            <div className='details'>
-                <div className='location'>
-                    <img src='../../public/adobe-location.png' alt='location icon'></img>
-                    <p>JAPAN</p>
-                    <a href='https://www.google.com'>View on Google Maps</a>
+function Entry(props) {
+    return (
+        <article className='enrty-container'>
+            <section className='entry'>
+                <div className='img-container'>
+                    <img src={props.img.imgUrl} alt={props.img.imgAlt}></img>
                 </div>
-                <h1>Mount Fuji</h1>
-                <p className='date'>12 Jan, 2021 - 24 Jan, 2021</p>
-                <p className='description'>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
-            </div>
-        </section>
+                <div className='details'>
+                    <div className='location'>
+                        <img src={locationIcon} alt='location icon'></img>
+                        <p>{props.location}</p>
+                        <a href={props.googleMapsUrl}>View on Google Maps</a>
+                    </div>
+                    <h2>{props.title}</h2>
+                    <p className='date'>{props.date}</p>
+                    <p className='description'>{props.description}</p>
+                </div>
+            </section>
+            <hr />
+        </article>
     )
 }
 

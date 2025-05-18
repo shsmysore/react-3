@@ -5,6 +5,7 @@ header {
     align-items: center;
     color: white;
     height: 55px;
+    margin-bottom: 45px;
 }
 
 header > img {
